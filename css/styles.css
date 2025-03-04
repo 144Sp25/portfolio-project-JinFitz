@@ -1,10 +1,8 @@
-/* Jin Fitzmaurice, style.css, Feb. 11. 2025- */
-/*Colours: Gold:#cc9f6b, Body Bleu:#014c75, Cream white:#efedea, Dark red:#a8273c,
- * Light teal:#269499, */
+/* Jin Fitzmaurice, style.css, Feb. 11. 2025-*/
 
 /*Style rule for CSS reset*/
 /*CSS Reset*/
-body, header, nav, main,footer,img, h1, h5 {
+body, header, nav, main, footer, img, h1, h5 {
     margin: 0;
     padding: 0;
     border: 0;
@@ -15,6 +13,7 @@ body {
     background-color: #014c75;
     color: #efedea;
     font-family: "Ubuntu", serif, Geneva, Arial, sans-serif;
+    /*background-image: url(kcskylinenight);*/
 }
 
 img {
@@ -25,14 +24,25 @@ img {
 /*Style rules for the header*/
 header {
     width: 100%;
-    float: left;
     font-family: "Ubuntu", serif, Geneva, Arial, sans-serif;
-    color: efedea;
+    color: #cc9f6b;
+    background: #efedea;
 }
 
-.eyelogo{
-    align-content: right;
-    
+.eyelogo {
+    width: 60px; /* Adjust the size as needed */
+    height: auto;
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    /*right: 500px; /* Adjust the right position as needed */
+    float: left;
+    padding-left: 50px; /* Adds some padding for spacing */
+    z-index: 1000; /* Ensures the logo stays on top of other elements */
+}
+
+.resume {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 h2 {
@@ -41,7 +51,7 @@ h2 {
     font-style: normal;
 }
 
-.overall-title {
+h1 {
     font-family: "Faculty Glyphic", serif;
     font-weight: 600;
     font-style: normal;
@@ -66,39 +76,45 @@ main p {
 nav {
     text-align: center;
     font-family: "Ubuntu", serif;
-    text-decoration: none;
+    padding: 1%;
+    margin-bottom: 1%;
 }
 
 nav ul {
     list-style-type: none;
     font-family: "Ubuntu", serif;
     text-decoration: none;
-    font-size: large
+    font-size: large;
+    margin: 0;
+    padding: 0;
 }
 
-nav li{
+nav li {
     font-size: large;
+    border-top: 1px solid #fff;
+}
+
+nav li a {
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
 }
 
 /*Styles rule for all links on website*/
 a:link {
     color: #efedea;
-    /* Unvisited link */
 }
 
 a:visited {
     color: #269499;
-    /* Visited link */
 }
 
 a:hover {
     color: #cc9f6b;
-    /* Mouse over link */
 }
 
 a:active {
     color: #a8273c;
-    /* Selected link */
 }
 
 #contact {
@@ -123,4 +139,103 @@ footer {
     color: #efedea;
     padding: 0 1em;
     font-family: "Ubuntu", serif;
+    background: linear-gradient(to top, #a8273c, #014c75);
 }
+
+/*Media Query ?? for Phones*/
+@media (max-width: 768px) {
+    .tablet-desktop {
+        display: none;
+    }
+
+    .eyelogo {
+        position: static;
+        display: block;
+        margin: 0 auto;
+        width: 200px
+    }
+}
+
+/*Media Query for Tablet Viewport*/
+@media screen and (min-width: 769px), print {
+    /*Tablet Viewport: Show tablet-destktop class, hide mobile class*/
+    .tablet-desktop {
+        display: block;
+        z-index: 1000; /*Ensures the logo stays on top of other elements*/
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /*Tablet Viewport: Style rules for nav area*/
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.25em;
+    }
+
+    nav li a {
+        padding: 0.5em;
+    }
+}
+
+/*Media Query for Desktop Viewport*/
+@media screen and (min-width: 1000px), print {
+    /*Desktop Viewport: Style rules for nav area*/
+    nav li {
+        font-size: 1.5em;
+    }
+
+    nav li a {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    nav li a:hover {
+        color: #cc9f6b;
+    }
+}
+
+/*Desktop Viewport: Style rules for main content*/
+/*#info ul {
+    margin-left: 5%;
+  }*/
+
+/*Media Query for Large Desktop Viewports*/
+@media screen and (min-width: 1921px), print {
+    /*body{
+        background: linear-gradient(#f6eee4 #78593a)
+    } */
+
+    #wrapper {
+        width: 1920px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    main {
+        background-color: #014c75;
+    }
+
+    #map {
+        align-content: center;
+    }
+}
+
+/*Media Query for Print*/
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+/*Colours: Gold:#cc9f6b, Body Bleu:#014c75, Cream white:#efedea, Dark red:#a8273c,
+ * Light teal:#269499, */
+/* # is an id selector, used to target a single specific element with a unique id,
+* . is a class selector used to target multiple elements with a particular class*/
