@@ -35,14 +35,13 @@ header {
     position: absolute;
     top: 10px; /* Adjust the top position as needed */
     /*right: 500px; /* Adjust the right position as needed */
-    float: left;
+    /*float: left;*/
     padding-left: 50px; /* Adds some padding for spacing */
     z-index: 1000; /* Ensures the logo stays on top of other elements */
 }
 
 .resume {
-    margin-right: auto;
-    margin-left: auto;
+    align-items: center;
 }
 
 h2 {
@@ -153,6 +152,7 @@ footer {
         display: block;
         margin: 0 auto;
         width: 200px
+        float: left;
     }
 }
 
