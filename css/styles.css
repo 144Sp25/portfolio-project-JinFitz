@@ -99,6 +99,15 @@ nav li a {
     text-decoration: none;
 }
 
+#pagetitle{
+    text-align: center;
+}
+
+#aboutcontent{
+    text-align: center;
+    align-content: right;
+}
+
 /*Styles rule for all links on website*/
 a:link {
     color: #efedea;
@@ -118,7 +127,7 @@ a:active {
 
 #contact {
     font-size: 1em;
-    text-align: left;
+    text-align: center;
 }
 
 #portfoliolist {
@@ -129,6 +138,10 @@ a:active {
 
 .round {
     border-radius: 6px;
+}
+
+#left-column{
+    flex: 50; /*Adjust the flex value as needed*/
 }
 
 /*Style rules for footer content*/
